@@ -58,6 +58,7 @@ namespace MacdonaldsHackathon2014
         {
             CheckBox cb = (CheckBox)sender;
 
+            CurrentUser = (User)PhoneApplicationService.Current.State["current"];
             if (cb.IsChecked == true)
             {
                 if (!string.IsNullOrEmpty((string)cb.CommandParameter) && CurrentUser.Username != (string)cb.CommandParameter)
