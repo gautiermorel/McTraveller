@@ -9,6 +9,7 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using System.ComponentModel;
 using System.Collections.ObjectModel;
+using System.Windows.Media.Imaging;
 
 namespace MacdonaldsHackathon2014
 {
@@ -70,7 +71,12 @@ namespace MacdonaldsHackathon2014
             ListPhonesConnected.Add(tmp1);
             ListPhonesConnected.Add(tmp2);
 
+            ListPhonesConnected.Add(CurrentUser);
+            
+            ListPhonesConnected.Move(2, 0);
 
+            ListPhonesConnected[0].Picture = new Image();
+            ListPhonesConnected[0].Picture.Source = new BitmapImage(new Uri("/img/2.jpg", UriKind.Relative));
 
             this.ListConnections = new List<Connection>();
             this.ListConnections.Add(new Connection() { ConnectedFrom = CurrentUser.Username, ConnectedTo = "Daphné" });
@@ -109,8 +115,8 @@ namespace MacdonaldsHackathon2014
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            //if (CurrentUser.Age == -1)
-            //    NavigationService.Navigate(new Uri("/FillMeetForm.xaml", UriKind.Relative));
+            if (CurrentUser.Age == -1)
+                NavigationService.Navigate(new Uri("/FillMeetForm.xaml", UriKind.Relative));
 
             User userSelected = null;
             if (PhoneApplicationService.Current.State.Keys.Contains("param"))

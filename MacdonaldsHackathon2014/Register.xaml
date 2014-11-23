@@ -42,7 +42,7 @@
             <PasswordBox HorizontalAlignment="Left" Height="72" Margin="32,263,0,0" VerticalAlignment="Top" Width="394"/>
             <TextBlock HorizontalAlignment="Left" Margin="43,231,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top"/>
             <TextBlock HorizontalAlignment="Left" Margin="43,335,0,0" TextWrapping="Wrap" Text="Confirm password" VerticalAlignment="Top"/>
-            <HyperlinkButton Content="Continue as guest user" HorizontalAlignment="Left" Margin="94,684,0,0" VerticalAlignment="Top"/>
+            <HyperlinkButton Click="HyperlinkButton_Click" Content="Continue as guest user" HorizontalAlignment="Left" Margin="94,684,0,0" VerticalAlignment="Top"/>
         </Grid>
     </Grid>
 

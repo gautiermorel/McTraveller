@@ -35,7 +35,12 @@
             <TextBlock HorizontalAlignment="Left" Margin="44,356,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" RenderTransformOrigin="0.883,1.315"/>
             <PasswordBox HorizontalAlignment="Left" Height="72" Margin="32,378,0,0" VerticalAlignment="Top" Width="394"/>
             <Button Background="#FDC82F" Content="Login" HorizontalAlignment="Left" Margin="32,500,0,0" VerticalAlignment="Top" Width="394"/>
+            <HyperlinkButton Click="HyperlinkButton_Click" Content="Continue as a guest" HorizontalAlignment="Left" Margin="69,593,0,0" VerticalAlignment="Top" Width="320"/>
+
+            <HyperlinkButton Click="HyperlinkButton_Click2" Content="Register now" HorizontalAlignment="Left" Margin="69,664,0,0" VerticalAlignment="Top" Width="320"/>
         </Grid>
     </Grid>
+    
+    
 
 </phone:PhoneApplicationPage>

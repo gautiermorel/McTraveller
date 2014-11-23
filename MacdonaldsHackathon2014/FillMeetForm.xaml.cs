@@ -39,10 +39,8 @@ namespace MacdonaldsHackathon2014
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            PhotoChooserTask photoChooserTask = new PhotoChooserTask();
-
-            photoChooserTask.Completed += photoChooserTask_Completed;
-            photoChooserTask.Show();
+            BitmapImage toto = new BitmapImage(new Uri("/img/2.jpg", UriKind.Relative));
+            img.Source = toto;
         }
 
         void photoChooserTask_Completed(object sender, PhotoResult e)
@@ -58,75 +56,73 @@ namespace MacdonaldsHackathon2014
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            if (PhoneApplicationService.Current.State.Keys.Contains("current"))
-                CurrentUser = (User)PhoneApplicationService.Current.State["current"];
+            if (PhoneApplicationService.Current.State.Keys.Contains("param"))
+                CurrentUser = (User)PhoneApplicationService.Current.State["param"];
 
             base.OnNavigatedTo(e);
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-        //    CurrentUser = (User)PhoneApplicationService.Current.State["current"];
+            CurrentUser = (User)PhoneApplicationService.Current.State["param"];
 
-        //    try
-        //    {
-        //        if (male.IsChecked == true)
-        //            CurrentUser.Gender = "Male";
-        //        else if (female.IsChecked == true)
-        //            CurrentUser.Gender = "Female";
-        //        else
-        //            throw new Exception("Please select your gender");
+            try
+            {
+                if (male.IsChecked == true)
+                    CurrentUser.Gender = "Male";
+                else if (female.IsChecked == true)
+                    CurrentUser.Gender = "Female";
+                else
+                    throw new Exception("Please select your gender");
 
-        //        if (age.SelectedItem == null)
-        //            throw new Exception("Please select your age");
-        //        else
-        //            CurrentUser.Age = (int)age.SelectedItem;
+                int aaa = -1;
+                if (string.IsNullOrEmpty(age.Text) || !int.TryParse(age.Text, out aaa))
+                    throw new Exception("Please select your age");
 
-        //        if (pictureChoose.Source != null)
-        //            CurrentUser.Picture = pictureChoose;
-        //        else
-        //            throw new Exception("Please select a profile picture");
+                CurrentUser.Age = aaa;
 
-        //        if (bike.IsChecked == true)
-        //            CurrentUser.AddActivity(bike.ToString());
-        //        if (museum.IsChecked == true)
-        //            CurrentUser.AddActivity(museum.ToString());
-        //        if (computer.IsChecked == true)
-        //            CurrentUser.AddActivity(computer.ToString());
-        //        if (eat.IsChecked == true)
-        //            CurrentUser.AddActivity(eat.ToString());
-        //        if (nightclub.IsChecked == true)
-        //            CurrentUser.AddActivity(nightclub.ToString());
-        //        if (eat.IsChecked == true)
-        //            CurrentUser.AddActivity(eat.ToString());
-        //        if (meet.IsChecked == true)
-        //            CurrentUser.AddActivity(meet.ToString());
+                if (bike.IsChecked == true)
+                    CurrentUser.AddActivity(bike.Content.ToString());
+                if (museum.IsChecked == true)
+                    CurrentUser.AddActivity(museum.Content.ToString());
+                if (computer.IsChecked == true)
+                    CurrentUser.AddActivity(computer.Content.ToString());
+                if (eat.IsChecked == true)
+                    CurrentUser.AddActivity(eat.Content.ToString());
+                if (nightclub.IsChecked == true)
+                    CurrentUser.AddActivity(nightclub.Content.ToString());
+                if (eat.IsChecked == true)
+                    CurrentUser.AddActivity(eat.Content.ToString());
+                if (meet.IsChecked == true)
+                    CurrentUser.AddActivity(meet.Content.ToString());
 
-        //        if (CurrentUser.Activities.Count == 0)
-        //            throw new Exception("Please select at least one activity");
+                if (CurrentUser.Activities.Count == 0)
+                    throw new Exception("Please select at least one activity");
 
-        //        if (fr.IsChecked == true)
-        //            CurrentUser.AddLanguage(fr.ToString());
-        //        if (sp.IsChecked == true)
-        //            CurrentUser.AddLanguage(sp.ToString());
-        //        if (en.IsChecked == true)
-        //            CurrentUser.AddLanguage(en.ToString());
-        //        if (ch.IsChecked == true)
-        //            CurrentUser.AddLanguage(ch.ToString());
-        //        if (it.IsChecked == true)
-        //            CurrentUser.AddLanguage(it.ToString());
-        //        if (se.IsChecked == true)
-        //            CurrentUser.AddLanguage(se.ToString());
+                if (fr.IsChecked == true)
+                    CurrentUser.AddLanguage(fr.Content.ToString());
+                if (sp.IsChecked == true)
+                    CurrentUser.AddLanguage(sp.Content.ToString());
+                if (en.IsChecked == true)
+                    CurrentUser.AddLanguage(en.Content.ToString());
+                if (ch.IsChecked == true)
+                    CurrentUser.AddLanguage(ch.Content.ToString());
+                if (it.IsChecked == true)
+                    CurrentUser.AddLanguage(it.Content.ToString());
+                if (se.IsChecked == true)
+                    CurrentUser.AddLanguage(se.Content.ToString());
 
-        //        if (CurrentUser.Languages.Count == 0)
-        //            throw new Exception("Please select at least one language");
+                if (CurrentUser.Languages.Count == 0)
+                    throw new Exception("Please select at least one language");
 
-        //        PhoneApplicationService.Current.State["current"] = CurrentUser;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show(ex.Message);
-        //    }
+                PhoneApplicationService.Current.State["param"] = CurrentUser;
+
+                NavigationService.Navigate(new Uri("/MeetHome.xaml", UriKind.Relative));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

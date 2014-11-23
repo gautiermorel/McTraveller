@@ -34,35 +34,34 @@
         
             <!--ContentPanel - placez tout contenu supplémentaire ici-->
         <Grid Background="#FFF" x:Name="ContentPanel"  Grid.Row="2">
-            <Button BorderBrush="#D52B1E" VerticalAlignment="Top" HorizontalAlignment="Left" Click="Button_Click" Background="Transparent" Width="440" Margin="22,33,0,0">
+            <Button BorderBrush="#D52B1E" VerticalAlignment="Top" HorizontalAlignment="Left" Click="Button_Click" Background="Transparent" Width="440" Margin="22,74,0,0">
                 <StackPanel Orientation="Horizontal" Width="400">
                     <Image Source="/img/quiz3.png" Width="150" Height="150" Margin="0,0,10,0"/>
                     <StackPanel Orientation="Vertical">
-                        <TextBlock Foreground="#D52B1E" FontSize="32" Width="240">Did You Know ?</TextBlock>
-                        <TextBlock Foreground="#000" FontSize="23" Width="240" Height="76" >
-                        	<Run Text="What is around "/>
+                        <TextBlock Foreground="#D52B1E" FontSize="32" Width="240">Do You Know...</TextBlock>
+                        <TextBlock Foreground="#000" FontSize="19" Width="240" Height="101" >
+                        	<Run Text="what is around "/>
                         	<LineBreak/>
-                        	<Run Text="this McDonald's ?"/>
+                        	<Run Text="this McDonald's?"/>
+                            <LineBreak/>
+                            <Run Text="Tap to find out!"/>
                         </TextBlock>
                     </StackPanel>
                 </StackPanel>
             </Button>
 
-            <TextBlock Foreground="#D52B1E" Width="30" Margin="225,238,225,228">OR</TextBlock>
+            <TextBlock Foreground="#D52B1E" Width="30" Margin="232,292,218,174">OR</TextBlock>
             
-            <Button BorderBrush="#D52B1E" VerticalAlignment="Top" Height="100" HorizontalAlignment="Left" Click="Button_Click_1" Background="Transparent" Width="225" Margin="119,273,0,0">
+            <Button BorderBrush="#D52B1E" VerticalAlignment="Top" Height="100" HorizontalAlignment="Left" Click="Button_Click_1" Background="Transparent" Width="440" Margin="22,350,0,0">
                 <StackPanel Orientation="Horizontal" Width="300">
-                    <Image Source="/img/meet3.png" Width="50" Height="50" Margin="0,0,10,0"/>
+                    <Image Source="/img/meet3.png" Width="50" Height="50" Margin="-30,0,10,0"/>
                     <StackPanel Orientation="Vertical" Width="121">
-                        <TextBlock Foreground="#D52B1E" FontSize="25" Width="240">Just Meet</TextBlock>
+                        <TextBlock Foreground="#D52B1E" FontSize="25" RenderTransformOrigin="0.575,0.441" Margin="0,0,-154,0">
+                    		<Run Text="Meet other McTravellers"/>
+                        </TextBlock>
                     </StackPanel>
                 </StackPanel>
             </Button>
-            
-            <Button Foreground="#000" VerticalAlignment="Top" HorizontalAlignment="Left" Click="Button_Click_2" Background="Transparent" Width="440" Margin="30,414,0,0">
-            Debug    
-            </Button>
-
         </Grid>
         
     </Grid>
@@ -70,7 +69,7 @@
         <shell:ApplicationBar Mode="Default" Opacity="1.0" BackgroundColor="#D52B1E#" IsMenuEnabled="True" IsVisible="True">
 
             <shell:ApplicationBar.MenuItems>
-                <shell:ApplicationBarMenuItem Text="settings" />
+                <shell:ApplicationBarMenuItem Text="Contact us" />
                 <shell:ApplicationBarMenuItem Text="about mctraveller" />
             </shell:ApplicationBar.MenuItems>
 

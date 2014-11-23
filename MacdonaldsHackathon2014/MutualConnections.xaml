@@ -15,9 +15,9 @@
     
     <phone:PhoneApplicationPage.Resources>
         <DataTemplate x:Key="PhonesConnectedTemplate">
-            <StackPanel Height="210" Width="350">
-                <Border Height="200" Width="350" BorderBrush="White" BorderThickness="2">
-                    <Grid Height="200" Width="350">
+            <StackPanel Height="300" Width="400">
+                <Border Height="200" Width="350" Background="Green" BorderBrush="White" BorderThickness="2">
+                    <Grid Background="Green" Height="200" Width="350">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*" />
                             <RowDefinition Height="*" />
@@ -25,13 +25,14 @@
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="3*" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <Image Grid.Column="0" Grid.RowSpan="2" Source="{Binding Picture}" />
+                        <TextBlock Grid.Row="0" Grid.Column="0">You've matched : </TextBlock>
+                        
                         <TextBlock Text="{Binding Username}" Grid.Column="1" FontSize="24" />
-                        <TextBlock Text="{Binding LanguagesToShow}" Grid.Column="1" Grid.Row="1" FontSize="20" />
-                        <TextBlock Text="{Binding ActivitiesToShow}" Grid.Column="1" Grid.Row="2" FontSize="20" />
+                        <TextBlock>We could gather each other </TextBlock>
+                        
+                        
                     </Grid>
                 </Border>
             </StackPanel>
@@ -53,7 +54,8 @@
             <TextBlock Width="250" Margin="114,166,92,576">
             McDonald's COUNTY HALL
             </TextBlock>
-            <phone:LongListSelector BorderBrush="White" BorderThickness="2" HorizontalAlignment="Left" Height="482" Margin="10,216,0,0" VerticalAlignment="Top" Width="436" ItemsSource="{Binding MatchedUsers}" ItemTemplate="{StaticResource PhonesConnectedTemplate}" />
+            <TextBlock Height="50" FontSize="20" Margin="114,235,92,483">You haven't be matched yet</TextBlock>
+            <phone:LongListSelector BorderBrush="#FDC82F" BorderThickness="5" HorizontalAlignment="Center" Height="480" Margin="10,216,0,0" VerticalAlignment="Top" Width="436" ItemsSource="{Binding MatchedUsers}" ItemTemplate="{StaticResource PhonesConnectedTemplate}" />
 
         </Grid>
     </Grid>
