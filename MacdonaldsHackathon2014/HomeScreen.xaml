@@ -14,45 +14,53 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot est la grille racine où tout le contenu de la page est placé-->
-    <Grid x:Name="LayoutRoot" Background="#fff">
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.504,1.5" StartPoint="0.504,0.03">
+                <GradientStop Color="#600301" Offset="0"/>
+                <GradientStop Color="#CF0F00" Offset="0.567"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="200"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Image Source="img/wall.png"></Image>
+        <Image HorizontalAlignment="Center" Width="200" Height="200" Source="img/logo.png" Margin="154,-40,126,40"></Image>
+        <TextBlock Width="250" Height="100" Margin="132,138,98,458" Grid.RowSpan="3">
+            McDonald's COUNTY HALL
+        </TextBlock>
         
             <!--ContentPanel - placez tout contenu supplémentaire ici-->
-        <Grid x:Name="ContentPanel" Margin="14,10,10,10" Grid.Row="2">
-            <TextBlock Foreground="#D52B1E" FontSize="30" Width="180" Margin="10,10,266,518">Welcome</TextBlock>
+        <Grid Background="#FFF" x:Name="ContentPanel"  Grid.Row="2">
+            <Button BorderBrush="#D52B1E" VerticalAlignment="Top" HorizontalAlignment="Left" Click="Button_Click" Background="Transparent" Width="440" Margin="22,33,0,0">
+                <StackPanel Orientation="Horizontal" Width="400">
+                    <Image Source="/img/quiz3.png" Width="150" Height="150" Margin="0,0,10,0"/>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock Foreground="#D52B1E" FontSize="32" Width="240">Did You Know ?</TextBlock>
+                        <TextBlock Foreground="#000" FontSize="23" Width="240" Height="76" >
+                        	<Run Text="What is around "/>
+                        	<LineBreak/>
+                        	<Run Text="this McDonald's ?"/>
+                        </TextBlock>
+                    </StackPanel>
+                </StackPanel>
+            </Button>
+
+            <TextBlock Foreground="#D52B1E" Width="30" Margin="225,238,225,228">OR</TextBlock>
             
-            <Button VerticalAlignment="Top" HorizontalAlignment="Left" Click="Button_Click_1" Background="Transparent" Width="440" Margin="10,55,0,0">
-                <StackPanel Orientation="Horizontal" Width="400">
-                    <Image Source="/img/meet3.png" Width="100" Height="100" Margin="0,0,10,0"/>
-                    <StackPanel Orientation="Vertical">
-                        <TextBlock Foreground="#D52B1E" FontSize="25" Width="180">Let's Meet</TextBlock>
-                        <TextBlock Foreground="#000" FontSize="15" Width="180" Height="64" >McDonald's offer you the <LineBreak/>possibility to meet some <LineBreak/>people</TextBlock>
+            <Button BorderBrush="#D52B1E" VerticalAlignment="Top" Height="100" HorizontalAlignment="Left" Click="Button_Click_1" Background="Transparent" Width="225" Margin="119,273,0,0">
+                <StackPanel Orientation="Horizontal" Width="300">
+                    <Image Source="/img/meet3.png" Width="50" Height="50" Margin="0,0,10,0"/>
+                    <StackPanel Orientation="Vertical" Width="121">
+                        <TextBlock Foreground="#D52B1E" FontSize="25" Width="240">Just Meet</TextBlock>
                     </StackPanel>
                 </StackPanel>
             </Button>
-            <Button VerticalAlignment="Top" HorizontalAlignment="Left" Click="Button_Click" Background="Transparent" Width="440" Margin="16,201,0,0">
-                <StackPanel Orientation="Horizontal" Width="400">
-                    <Image Source="/img/quiz3.png" Width="100" Height="100" Margin="0,0,10,0"/>
-                    <StackPanel Orientation="Vertical">
-                        <TextBlock Foreground="#D52B1E" FontSize="25" Width="180">Let's Quiz</TextBlock>
-                        <TextBlock Foreground="#000" FontSize="15" Width="180" Height="64" >McDonald's offer you the <LineBreak/>possibility to quiz</TextBlock>
-                    </StackPanel>
-                </StackPanel>
-            </Button>
-            <Button VerticalAlignment="Top" HorizontalAlignment="Left" Click="Button_Click_2" Background="Transparent" Width="440" Margin="16,347,0,0">
-                <StackPanel Orientation="Horizontal" Width="400">
-                    <Image Source="/img/thunder3.png" Width="100" Height="100" Margin="0,0,10,0"/>
-                    <StackPanel Orientation="Vertical">
-                        <TextBlock Foreground="#D52B1E" FontSize="25" Width="180">Let's Discover</TextBlock>
-                        <TextBlock Foreground="#000" FontSize="15" Width="180" Height="64" >McDonald's offer you the <LineBreak/>possibility to discover <LineBreak/> things</TextBlock>
-                    </StackPanel>
-                </StackPanel>
+            
+            <Button Foreground="#000" VerticalAlignment="Top" HorizontalAlignment="Left" Click="Button_Click_2" Background="Transparent" Width="440" Margin="30,414,0,0">
+            Debug    
             </Button>
 
         </Grid>

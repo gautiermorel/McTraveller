@@ -42,7 +42,7 @@ namespace MacdonaldsHackathon2014
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/StartScreen.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/Login.xaml", UriKind.Relative));
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)

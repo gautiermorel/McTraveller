@@ -14,22 +14,27 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot est la grille racine où tout le contenu de la page est placé-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.504,1.5" StartPoint="0.504,0.03">
+                <GradientStop Color="#600301" Offset="0"/>
+                <GradientStop Color="#CF0F00" Offset="0.567"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        
+        <!--TitlePanel contient le nom de l'application et le titre de la page-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Foreground="#FDC82F" Text="Login" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
 
+        <Image Source="/img/logo.png" Width="150" Height="150" Margin="297,10,33,608"></Image>
+        
         <!--ContentPanel - placez tout contenu supplémentaire ici-->
         <Grid x:Name="ContentPanel" Margin="10,0,14,0">
-            <TextBox HorizontalAlignment="Left" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" Height="72" Margin="32,30,0,0" TextWrapping="Wrap" Text="Nickname" VerticalAlignment="Top" Width="394"/>
-            <PasswordBox HorizontalAlignment="Left" Height="72" Margin="32,132,0,0" VerticalAlignment="Top" Width="394"/>
-            <Button Content="Login" HorizontalAlignment="Left" Margin="32,209,0,0" VerticalAlignment="Top" Width="394"/>
-            <TextBox HorizontalAlignment="Left" GotFocus="TextBox_GotFocus" Height="72" LostFocus="TextBox_LostFocus_2" Margin="32,592,0,0" TextWrapping="Wrap" Text="Email address" VerticalAlignment="Top" Width="394"/>
-            <Button Content="Register" HorizontalAlignment="Left" Margin="32,664,0,0" VerticalAlignment="Top" Width="394"/>
-            <TextBox HorizontalAlignment="Left" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus_1" Height="72" Margin="32,324,0,0" TextWrapping="Wrap" Text="Nickname" VerticalAlignment="Top" Width="394"/>
-            <PasswordBox HorizontalAlignment="Left" Height="72" Margin="32,520,0,0" VerticalAlignment="Top" Width="394"/>
-            <PasswordBox HorizontalAlignment="Left" Height="72" Margin="32,422,0,0" VerticalAlignment="Top" Width="394"/>
-            <TextBlock HorizontalAlignment="Left" Margin="43,107,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top"/>
-            <TextBlock HorizontalAlignment="Left" Margin="43,400,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top"/>
-            <TextBlock HorizontalAlignment="Left" Margin="43,498,0,0" TextWrapping="Wrap" Text="Confirm password" VerticalAlignment="Top"/>
-            <HyperlinkButton Content="Continue as guest user" HorizontalAlignment="Left" Margin="113,741,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus" Height="72" Margin="32,266,0,0" TextWrapping="Wrap" Text="Nickname" VerticalAlignment="Top" Width="394"/>
+            <TextBlock HorizontalAlignment="Left" Margin="44,356,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" RenderTransformOrigin="0.883,1.315"/>
+            <PasswordBox HorizontalAlignment="Left" Height="72" Margin="32,378,0,0" VerticalAlignment="Top" Width="394"/>
+            <Button Background="#FDC82F" Content="Login" HorizontalAlignment="Left" Margin="32,500,0,0" VerticalAlignment="Top" Width="394"/>
         </Grid>
     </Grid>
 
