@@ -47,5 +47,15 @@ namespace MacdonaldsHackathon2014
             if (string.IsNullOrEmpty(t.Text))
                 t.Text = "Email address";
         }
+
+        private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/HomeScreen.xaml", UriKind.Relative));
+        }
+
+        private void HyperlinkButton_Click2(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Register.xaml", UriKind.Relative));
+        }
     }
 }

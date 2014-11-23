@@ -127,6 +127,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AppResources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Result.xaml.cs">
+      <DependentUpon>Result.xaml</DependentUpon>
+    </Compile>
     <Compile Include="StartScreen.xaml.cs">
       <DependentUpon>StartScreen.xaml</DependentUpon>
     </Compile>
@@ -169,6 +172,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Result.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="StartScreen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -201,10 +208,14 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="img\1.png" />
+    <Content Include="img\2.jpg" />
     <Content Include="img\logo.png" />
     <Content Include="img\meet3.png" />
     <Content Include="img\play3.png" />
     <Content Include="img\quiz3.png" />
+    <Content Include="img\res.png" />
+    <Content Include="img\result.png" />
+    <Content Include="img\retry.png" />
     <Content Include="img\thunder3.png" />
     <Content Include="img\wall.png" />
   </ItemGroup>

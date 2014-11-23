@@ -21,7 +21,16 @@ namespace MacdonaldsHackathon2014
         {
             ListBoxItem lbi = ((sender as ListBox).SelectedItem as ListBoxItem);
             //Redirection 
-            NavigationService.Navigate(new Uri("/HomeScreen.xaml", UriKind.Relative));
+            if (lbi.Content.ToString() == "McDonald's Free Wifi")
+            {
+                NavigationService.Navigate(new Uri("/Login.xaml", UriKind.Relative));
+            }
+            else
+            {
+                MessageBox.Show("You have to be connected to a McDonald's network");
+            }
+            
+
         }
 
     }

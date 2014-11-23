@@ -34,6 +34,17 @@ namespace MacdonaldsHackathon2014
             }
         }
 
+        private void SubmitAll_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/Result.xaml", UriKind.Relative));
+
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/MeetHome.xaml", UriKind.Relative));
+        }
+
         public Quizz()
         {
             InitializeComponent();

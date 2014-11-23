@@ -21,11 +21,7 @@ namespace MacdonaldsHackathon2014
             
 
             // For the demonstration
-            temporaryUser = new User("Sacha", "toto112", "toto112@toto.net");
-            temporaryUser.AddLanguage("Français");
-            temporaryUser.AddLanguage("English");
-            temporaryUser.AddActivity("Museum");
-            temporaryUser.AddActivity("Nightclub");
+            temporaryUser = new User("McGuest", "toto112", "toto112@toto.net");
 
             PhoneApplicationService.Current.State["param"] = temporaryUser;
         }
