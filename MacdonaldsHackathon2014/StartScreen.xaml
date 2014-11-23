@@ -45,7 +45,7 @@
             	<Run Text="login to "/>
             	<Run Text="McDonald's wifi :"/>
             </TextBlock>
-            <ListBox Opacity="0.9" SelectionChanged="PrintText" SelectionMode="Single" Background="White" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="18,204,22,204" Width="440">
+            <ListBox Opacity="0.9" SelectionChanged="PrintText" SelectionMode="Single" Background="White" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="18,250,22,275" Width="440" Height="243">
                 <ListBoxItem FontSize="45" Foreground="#D52B1E">McHacks</ListBoxItem>
                 <ListBoxItem  FontSize="45" Foreground="Green">McDonald's Free Wifi</ListBoxItem>
                 <ListBoxItem FontSize="45" Foreground="#D52B1E">BT Wifi</ListBoxItem>
