@@ -55,12 +55,12 @@
             <phone:PanoramaItem Foreground="#FDC82F" Header="Sharing">
                 <Grid Name="grid1" >
                     <TextBlock Text="Activities" Margin="10,0,300,437" />
-                    <CheckBox Name="bike" Content="Biking"  HorizontalAlignment="Left" Height="75" FontSize="20"  VerticalAlignment="Top" Width="190" Margin="10,19,0,0"/>
+                    <CheckBox Name="bike" Content="Markets"  HorizontalAlignment="Left" Height="75" FontSize="20"  VerticalAlignment="Top" Width="190" Margin="10,19,0,0"/>
                     <CheckBox Name="museum" Content="Museum" HorizontalAlignment="Left" Height="75" FontSize="20"  VerticalAlignment="Top" Width="190" Margin="220,19,0,0"/>
-                    <CheckBox Name="computer" Content="Computer" HorizontalAlignment="Left" Height="75" FontSize="20"  VerticalAlignment="Top" Width="190" Margin="10,77,0,0"/>
-                    <CheckBox Name="eat" Content="Eat and drink" HorizontalAlignment="Left" Height="75" FontSize="20"  VerticalAlignment="Top" Width="190" Margin="220,77,0,0"/>
-                    <CheckBox Name="nightclub" Content="Nightclub" HorizontalAlignment="Left" Height="75" FontSize="20"  VerticalAlignment="Top" Width="190" Margin="10,136,0,0"/>
-                    <CheckBox Name="meet" Content="Meet people" HorizontalAlignment="Left" Height="75" FontSize="20"  VerticalAlignment="Top" Width="190" Margin="220,136,0,0"/>
+                    <CheckBox Name="computer" Content="Art Gallery" HorizontalAlignment="Left" Height="75" FontSize="20"  VerticalAlignment="Top" Width="190" Margin="10,77,0,0"/>
+                    <CheckBox Name="eat" Content="Shopping" HorizontalAlignment="Left" Height="75" FontSize="20"  VerticalAlignment="Top" Width="190" Margin="220,77,0,0"/>
+                    <CheckBox Name="nightclub" Content="Bars/Clubs" HorizontalAlignment="Left" Height="75" FontSize="20"  VerticalAlignment="Top" Width="190" Margin="10,136,0,0"/>
+                    <CheckBox Name="meet" Content="Pubs" HorizontalAlignment="Left" Height="75" FontSize="20"  VerticalAlignment="Top" Width="190" Margin="220,136,0,0"/>
 
                     <TextBlock Text="Languages" Margin="10,211,300,226" />
                     <CheckBox Name="fr" Content="Français"  HorizontalAlignment="Left" Height="75" FontSize="20"  VerticalAlignment="Top" Width="190" Margin="10,241,0,0"/>

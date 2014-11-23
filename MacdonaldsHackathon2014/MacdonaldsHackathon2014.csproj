@@ -209,6 +209,10 @@
     </Content>
     <Content Include="img\1.png" />
     <Content Include="img\2.jpg" />
+    <Content Include="img\a.png" />
+    <Content Include="img\b.png" />
+    <Content Include="img\d.png" />
+    <Content Include="img\c.png" />
     <Content Include="img\logo.png" />
     <Content Include="img\meet3.png" />
     <Content Include="img\play3.png" />
