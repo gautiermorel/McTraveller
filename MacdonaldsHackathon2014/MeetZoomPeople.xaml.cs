@@ -45,6 +45,9 @@ namespace MacdonaldsHackathon2014
             UserSelected = (User)PhoneApplicationService.Current.State["param"];
             CurrentUser = (User)PhoneApplicationService.Current.State["current"];
             ListConnections = (List<Connection>)PhoneApplicationService.Current.State["connections"];
+
+            if (UserSelected.Username != "You")
+                temporaryCheckBox.Visibility = System.Windows.Visibility.Visible;
         }
 
         protected override void OnBackKeyPress(System.ComponentModel.CancelEventArgs e)

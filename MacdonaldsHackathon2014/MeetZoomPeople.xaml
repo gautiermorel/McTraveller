@@ -38,7 +38,7 @@
             <TextBlock FontSize="40" HorizontalAlignment="Left" Margin="132,422,0,0" TextWrapping="Wrap" Text="{Binding UserSelected.Age}" VerticalAlignment="Top" Height="60" Width="83"/>
             <phone:LongListSelector FontSize="40" ItemsSource="{Binding UserSelected.Languages}" HorizontalAlignment="Left" Height="166" Margin="10,508,0,0" VerticalAlignment="Top" Width="205"/>
             <phone:LongListSelector FontSize="40" ItemsSource="{Binding UserSelected.Activities}" HorizontalAlignment="Left" Height="168" Margin="220,508,0,0" VerticalAlignment="Top" Width="236"/>
-            <CheckBox CommandParameter="{Binding UserSelected.Username}" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked" IsChecked="{Binding UserSelected.ImConnectedToThisUser, Mode=TwoWay}" Content="Connect this people" HorizontalAlignment="Left" Margin="95,676,0,-52" VerticalAlignment="Top"/>
+            <CheckBox Visibility="Collapsed" Name="temporaryCheckBox" CommandParameter="{Binding UserSelected.Username}" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked" IsChecked="{Binding UserSelected.ImConnectedToThisUser, Mode=TwoWay}" Content="Connect this people" HorizontalAlignment="Left" Margin="95,676,0,-52" VerticalAlignment="Top"/>
             <TextBlock FontSize="40" HorizontalAlignment="Left" Margin="220,422,0,0" TextWrapping="Wrap" Text="{Binding UserSelected.Gender}" VerticalAlignment="Top" Height="50" Width="226"/>
         </Grid>
     </Grid>
