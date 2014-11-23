@@ -216,6 +216,7 @@
     <Content Include="img\res.png" />
     <Content Include="img\result.png" />
     <Content Include="img\retry.png" />
+    <Content Include="img\star.png" />
     <Content Include="img\thunder3.png" />
     <Content Include="img\wall.png" />
   </ItemGroup>
