@@ -92,6 +92,19 @@ namespace MacdonaldsHackathon2014
             
             ListPhonesConnected.Move(4, 0);
 
+            ListPhonesConnected[1].Picture = new Image();
+            ListPhonesConnected[1].Picture.Source = new BitmapImage(new Uri("/img/a.png", UriKind.Relative));
+
+            ListPhonesConnected[2].Picture = new Image();
+            ListPhonesConnected[2].Picture.Source = new BitmapImage(new Uri("/img/b.png", UriKind.Relative));
+
+            ListPhonesConnected[3].Picture = new Image();
+            ListPhonesConnected[3].Picture.Source = new BitmapImage(new Uri("/img/c.png", UriKind.Relative));
+
+            ListPhonesConnected[4].Picture = new Image();
+            ListPhonesConnected[4].Picture.Source = new BitmapImage(new Uri("/img/d.png", UriKind.Relative));
+
+            
             this.ListConnections = new List<Connection>();
             this.ListConnections.Add(new Connection() { ConnectedFrom = CurrentUser.Username, ConnectedTo = "Daphné" });
             this.ListConnections.Add(new Connection() { ConnectedFrom = "Pierre", ConnectedTo = CurrentUser.Username });
