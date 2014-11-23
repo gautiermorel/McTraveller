@@ -20,12 +20,12 @@
             <!--Élément un de panorama-->
             <phone:PanoramaItem Header="General">
                 <Grid>
-                    <!--<TextBlock Text="Gender" Margin="0,0,310,437" />
+                    <TextBlock Text="Gender" Margin="0,0,310,437" />
                     <RadioButton Name="female" Content="Female" HorizontalAlignment="Left" Height="78" VerticalAlignment="Top" Width="192" Margin="0,28,0,0"/>
                     <RadioButton Name="male" Content="Male" HorizontalAlignment="Left" Height="78" VerticalAlignment="Top" Width="192" Margin="218,28,0,0"/>
                     <TextBlock Text="Age" Margin="0,121,310,316" />
                     <phone:LongListSelector Name="age"  ItemsSource="{Binding ListAge}" Margin="10,158,10,278" />
-                    <TextBlock Text="Picture..." Margin="5,261,305,184" />-->
+                    <TextBlock Text="Picture..." Margin="5,261,305,184" />
                     <Button Content="Browse" HorizontalAlignment="Left" Margin="115,237,0,0" VerticalAlignment="Top" Height="74" Width="277" Click="Button_Click"/>
                     <!--<Image Name="pictureChoose"  HorizontalAlignment="Left" Height="162" Margin="104,311,0,0" VerticalAlignment="Top" Width="154"/>-->
                 </Grid>
@@ -34,7 +34,7 @@
             <!--Élément deux de panorama-->
             <phone:PanoramaItem Header="item2">
                 <Grid Name="grid1" >
-                    <!--<TextBlock Text="Activities" Margin="10,0,300,437" />
+                    <TextBlock Text="Activities" Margin="10,0,300,437" />
                     <CheckBox Name="bike" Content="Biking"  HorizontalAlignment="Left" Height="75" FontSize="20"  VerticalAlignment="Top" Width="190" Margin="10,19,0,0"/>
                     <CheckBox Name="museum" Content="Museum" HorizontalAlignment="Left" Height="75" FontSize="20"  VerticalAlignment="Top" Width="190" Margin="220,19,0,0"/>
                     <CheckBox Name="computer" Content="Computer" HorizontalAlignment="Left" Height="75" FontSize="20"  VerticalAlignment="Top" Width="190" Margin="10,77,0,0"/>
@@ -50,7 +50,7 @@
                     <CheckBox Name="ch" Content="Chinese" HorizontalAlignment="Left" Height="75" FontSize="20"  VerticalAlignment="Top" Width="190" Margin="10,358,0,0"/>
                     <CheckBox Name="se" Content="Sedwish" HorizontalAlignment="Left" Height="75" FontSize="20"  VerticalAlignment="Top" Width="190" Margin="220,358,0,0"/>
 
-                    <Button Content="Submit" FontSize="15" Margin="0,415,0,0" Click="Button_Click_1" />-->
+                    <Button Content="Submit" FontSize="15" Margin="0,415,0,0" Click="Button_Click_1" />
                 </Grid>
             </phone:PanoramaItem>
         </phone:Panorama>

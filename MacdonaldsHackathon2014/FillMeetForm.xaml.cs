@@ -52,7 +52,7 @@ namespace MacdonaldsHackathon2014
                 BitmapImage img = new BitmapImage();
                 img.SetSource(e.ChosenPhoto);
 
-                pictureChoose.Source = img;
+                //pictureChoose.Source = img;
             }
         }
 
@@ -82,10 +82,10 @@ namespace MacdonaldsHackathon2014
                 else
                     CurrentUser.Age = (int)age.SelectedItem;
 
-                if (pictureChoose.Source != null)
-                    CurrentUser.Picture = pictureChoose;
-                else
-                    throw new Exception("Please select a profile picture");
+                //if (pictureChoose.Source != null)
+                //    CurrentUser.Picture = pictureChoose;
+                //else
+                //    throw new Exception("Please select a profile picture");
 
                 if (bike.IsChecked == true)
                     CurrentUser.AddActivity(bike.ToString());
@@ -122,6 +122,7 @@ namespace MacdonaldsHackathon2014
                     throw new Exception("Please select at least one language");
 
                 PhoneApplicationService.Current.State["current"] = CurrentUser;
+                NavigationService.Navigate(new Uri("/MeetHome.xaml", UriKind.Relative));
             }
             catch (Exception ex)
             {
