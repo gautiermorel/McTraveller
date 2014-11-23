@@ -240,5 +240,15 @@ namespace MacdonaldsHackathon2014
         {
             NavigationService.Navigate(new Uri("/HomeScreen.xaml", UriKind.Relative));
         }
+
+        private void RadioButton_Click_16(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RadioButton_Click_17(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
