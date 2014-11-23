@@ -49,6 +49,8 @@ namespace MacdonaldsHackathon2014
 
         protected override void OnBackKeyPress(System.ComponentModel.CancelEventArgs e)
         {
+            UserSelected = (User)PhoneApplicationService.Current.State["param"];
+
             PhoneApplicationService.Current.State["param"] = UserSelected;
 
             base.OnBackKeyPress(e);
@@ -79,6 +81,7 @@ namespace MacdonaldsHackathon2014
 
         private bool CheckConnectionExist(List<Connection> ListConnections, string from, string to)
         {
+            ListConnections = (List<Connection>)PhoneApplicationService.Current.State["connections"];
             foreach (Connection c in ListConnections)
             {
                 if (c.ConnectedFrom == from && c.ConnectedTo == to)
