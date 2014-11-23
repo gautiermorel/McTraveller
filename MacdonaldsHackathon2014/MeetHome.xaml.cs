@@ -149,11 +149,11 @@ namespace MacdonaldsHackathon2014
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            if (PhoneApplicationService.Current.State.Keys.Contains("current"))
-                CurrentUser = (User)PhoneApplicationService.Current.State["current"];
+            if (PhoneApplicationService.Current.State.Keys.Contains("param"))
+                CurrentUser = (User)PhoneApplicationService.Current.State["param"];
 
-            //if (CurrentUser.Age == -1)
-            //    NavigationService.Navigate(new Uri("/FillMeetForm.xaml", UriKind.Relative));
+            if (CurrentUser.Age == -1)
+                NavigationService.Navigate(new Uri("/FillMeetForm.xaml", UriKind.Relative));
 
             User userSelected = null;
             if (PhoneApplicationService.Current.State.Keys.Contains("param"))

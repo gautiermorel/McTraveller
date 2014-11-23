@@ -58,15 +58,16 @@ namespace MacdonaldsHackathon2014
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            if (PhoneApplicationService.Current.State.Keys.Contains("current"))
-                CurrentUser = (User)PhoneApplicationService.Current.State["current"];
+            if (PhoneApplicationService.Current.State.Keys.Contains("param"))
+                CurrentUser = (User)PhoneApplicationService.Current.State["param"];
 
             base.OnNavigatedTo(e);
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            CurrentUser = (User)PhoneApplicationService.Current.State["current"];
+            if (PhoneApplicationService.Current.State.Keys.Contains("param"))
+                CurrentUser = (User)PhoneApplicationService.Current.State["param"];
 
             try
             {
@@ -81,11 +82,6 @@ namespace MacdonaldsHackathon2014
                     throw new Exception("Please select your age");
                 else
                     CurrentUser.Age = (int)age.SelectedItem;
-
-                //if (pictureChoose.Source != null)
-                //    CurrentUser.Picture = pictureChoose;
-                //else
-                //    throw new Exception("Please select a profile picture");
 
                 if (bike.IsChecked == true)
                     CurrentUser.AddActivity(bike.ToString());
