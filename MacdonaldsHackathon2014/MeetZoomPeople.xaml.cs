@@ -33,6 +33,18 @@ namespace MacdonaldsHackathon2014
             }
         }
 
+        private string connectWithContent;
+        public string ConnectWithContent
+        {
+            get { return connectWithContent; }
+            set
+            {
+                connectWithContent = value;
+                NotifyPropertyChanged("ConnectWithContent");
+            }
+        }
+
+
         public User CurrentUser { get; set; }
 
         public List<Connection> ListConnections { get; set; }
@@ -48,6 +60,8 @@ namespace MacdonaldsHackathon2014
 
             if (UserSelected.Username != "You")
                 temporaryCheckBox.Visibility = System.Windows.Visibility.Visible;
+
+            ConnectWithContent = "Connect with " + UserSelected.Username;
         }
 
         protected override void OnBackKeyPress(System.ComponentModel.CancelEventArgs e)
