@@ -1,0 +1,41 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="MacdonaldsHackathon2014.MeetZoomPeople"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot est la grille racine où tout le contenu de la page est placé-->
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.504,1.5" StartPoint="0.504,0.03">
+                <GradientStop Color="#600301" Offset="0"/>
+                <GradientStop Color="#CF0F00" Offset="0.567"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!--ContentPanel - placez tout contenu supplémentaire ici-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Image HorizontalAlignment="Left" Height="300" Width="200" Margin="10,10,0,0" VerticalAlignment="Top"/>
+            <TextBlock Foreground="White" FontSize="30" HorizontalAlignment="Left" Margin="215,10,0,0" TextWrapping="Wrap" Text="{Binding UserSelected.Username}" VerticalAlignment="Top" Height="71" Width="231"/>
+            <TextBlock HorizontalAlignment="Left" Margin="236,134,0,0" TextWrapping="Wrap" Text="{Binding UserSelected.Age}" VerticalAlignment="Top" Height="50" Width="210"/>
+            <phone:LongListSelector ItemsSource="{Binding UserSelected.Languages}" HorizontalAlignment="Left" Height="48" Margin="88,340,0,0" VerticalAlignment="Top" Width="291"/>
+            <phone:LongListSelector ItemsSource="{Binding UserSelected.Activities}" HorizontalAlignment="Left" Height="185" Margin="10,420,0,0" VerticalAlignment="Top" Width="436"/>
+            <CheckBox CommandParameter="{Binding UserSelected.Username}" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked" IsChecked="{Binding UserSelected.ImConnectedToThisUser, Mode=TwoWay}" Content="Connect this people" HorizontalAlignment="Left" Margin="10,610,0,0" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="301,184,0,0" TextWrapping="Wrap" Text="{Binding UserSelected.Gender}" VerticalAlignment="Top" Height="43" Width="145"/>
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

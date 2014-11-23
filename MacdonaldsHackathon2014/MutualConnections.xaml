@@ -1,0 +1,51 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="MacdonaldsHackathon2014.MutualConnections"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+    
+    <phone:PhoneApplicationPage.Resources>
+        <DataTemplate x:Key="PhonesConnectedTemplate">
+            <StackPanel Height="210" Width="350">
+                <Border Height="200" Width="350" BorderBrush="White" BorderThickness="2">
+                    <Grid Height="200" Width="350">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="3*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="0" Grid.RowSpan="2" Source="{Binding Picture}" />
+                        <TextBlock Text="{Binding Username}" Grid.Column="1" FontSize="24" />
+                        <TextBlock Text="{Binding LanguagesToShow}" Grid.Column="1" Grid.Row="1" FontSize="20" />
+                        <TextBlock Text="{Binding ActivitiesToShow}" Grid.Column="1" Grid.Row="2" FontSize="20" />
+                    </Grid>
+                </Border>
+            </StackPanel>
+        </DataTemplate>
+    </phone:PhoneApplicationPage.Resources>
+
+    <!--LayoutRoot est la grille racine où tout le contenu de la page est placé-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+
+        <!--ContentPanel - placez tout contenu supplémentaire ici-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <phone:LongListSelector BorderBrush="White" BorderThickness="2" HorizontalAlignment="Left" Height="649" Margin="10,82,0,0" VerticalAlignment="Top" Width="436" ItemsSource="{Binding MatchedUsers}" ItemTemplate="{StaticResource PhonesConnectedTemplate}" />
+
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

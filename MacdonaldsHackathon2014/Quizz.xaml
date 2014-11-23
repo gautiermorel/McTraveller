@@ -1,0 +1,127 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="MacdonaldsHackathon2014.Quizz"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot est la grille racine où tout le contenu de la page est placé-->
+    <Grid x:Name="LayoutRoot" Background="#D52B1E">
+        <!--Contrôle Pivot-->
+        <phone:Pivot Foreground="#FDC82F" >
+            <!--Élément un de tableau croisé dynamique-->
+            <phone:PivotItem Header="Question 1">
+                <Grid>
+                    <TextBlock HorizontalAlignment="Left" Margin="10,51,0,0" FontSize="30" TextWrapping="Wrap" Text="{Binding ListQuestions[0].QuestionContent}" TextAlignment="Center" VerticalAlignment="Top" Height="117" Width="436"/>
+                    <RadioButton Content="{Binding ListQuestions[0].Answer1.Content}" HorizontalAlignment="Left" Margin="10,209,0,0" VerticalAlignment="Top" Width="436"/>
+                    <RadioButton Content="{Binding ListQuestions[0].Answer2.Content}" HorizontalAlignment="Left" Margin="10,281,0,0" VerticalAlignment="Top" Width="436"/>
+                    <RadioButton Content="{Binding ListQuestions[0].Answer3.Content}" HorizontalAlignment="Left" Margin="10,353,0,0" VerticalAlignment="Top" Width="436"/>
+                    <RadioButton Content="{Binding ListQuestions[0].Answer4.Content}" HorizontalAlignment="Left" Margin="10,430,0,0" VerticalAlignment="Top" Width="436"/>
+                    <TextBlock Margin="363,575,0,0" FontSize="25" TextWrapping="Wrap" Text="1 / 10" VerticalAlignment="Top" Height="59" HorizontalAlignment="Left" Width="93"/>
+                </Grid>
+            </phone:PivotItem>
+            <phone:PivotItem Header="Question 2">
+                <Grid>
+                    <TextBlock HorizontalAlignment="Left" Margin="10,51,0,0" FontSize="30" TextWrapping="Wrap" Text="{Binding ListQuestions[1].QuestionContent}" TextAlignment="Center" VerticalAlignment="Top" Height="117" Width="436"/>
+                    <RadioButton Content="{Binding ListQuestions[1].Answer1.Content}" HorizontalAlignment="Left" Margin="10,209,0,0" VerticalAlignment="Top" Width="436"/>
+                    <RadioButton Content="{Binding ListQuestions[1].Answer2.Content}" HorizontalAlignment="Left" Margin="10,281,0,0" VerticalAlignment="Top" Width="436"/>
+                    <RadioButton Content="{Binding ListQuestions[1].Answer3.Content}" HorizontalAlignment="Left" Margin="10,353,0,0" VerticalAlignment="Top" Width="436"/>
+                    <RadioButton Content="{Binding ListQuestions[1].Answer4.Content}" HorizontalAlignment="Left" Margin="10,430,0,0" VerticalAlignment="Top" Width="436"/>
+                    <TextBlock Margin="363,575,0,0" FontSize="25" TextWrapping="Wrap" Text="2 / 10" VerticalAlignment="Top" Height="59" HorizontalAlignment="Left" Width="93"/>
+                </Grid>
+            </phone:PivotItem>
+            <phone:PivotItem Header="Question 3">
+                <Grid>
+                    <TextBlock HorizontalAlignment="Left" Margin="10,51,0,0" FontSize="30" TextWrapping="Wrap" Text="{Binding ListQuestions[2].QuestionContent}" TextAlignment="Center" VerticalAlignment="Top" Height="117" Width="436"/>
+                    <RadioButton Content="{Binding ListQuestions[2].Answer1.Content}" HorizontalAlignment="Left" Margin="10,209,0,0" VerticalAlignment="Top" Width="436"/>
+                    <RadioButton Content="{Binding ListQuestions[2].Answer2.Content}" HorizontalAlignment="Left" Margin="10,281,0,0" VerticalAlignment="Top" Width="436"/>
+                    <RadioButton Content="{Binding ListQuestions[2].Answer3.Content}" HorizontalAlignment="Left" Margin="10,353,0,0" VerticalAlignment="Top" Width="436"/>
+                    <RadioButton Content="{Binding ListQuestions[2].Answer4.Content}" HorizontalAlignment="Left" Margin="10,430,0,0" VerticalAlignment="Top" Width="436"/>
+                    <TextBlock Margin="363,575,0,0" FontSize="25" TextWrapping="Wrap" Text="3 / 10" VerticalAlignment="Top" Height="59" HorizontalAlignment="Left" Width="93"/>
+                </Grid>
+            </phone:PivotItem>
+            <phone:PivotItem Header="Question 4">
+                <Grid>
+                    <TextBlock HorizontalAlignment="Left" Margin="10,51,0,0" FontSize="30" TextWrapping="Wrap" Text="{Binding ListQuestions[3].QuestionContent}" TextAlignment="Center" VerticalAlignment="Top" Height="117" Width="436"/>
+                    <RadioButton Content="{Binding ListQuestions[3].Answer1.Content}" HorizontalAlignment="Left" Margin="10,209,0,0" VerticalAlignment="Top" Width="436"/>
+                    <RadioButton Content="{Binding ListQuestions[3].Answer2.Content}" HorizontalAlignment="Left" Margin="10,281,0,0" VerticalAlignment="Top" Width="436"/>
+                    <RadioButton Content="{Binding ListQuestions[3].Answer3.Content}" HorizontalAlignment="Left" Margin="10,353,0,0" VerticalAlignment="Top" Width="436"/>
+                    <RadioButton Content="{Binding ListQuestions[3].Answer4.Content}" HorizontalAlignment="Left" Margin="10,430,0,0" VerticalAlignment="Top" Width="436"/>
+                    <TextBlock Margin="363,575,0,0" FontSize="25" TextWrapping="Wrap" Text="4 / 10" VerticalAlignment="Top" Height="59" HorizontalAlignment="Left" Width="93"/>
+                </Grid>
+            </phone:PivotItem>
+            <phone:PivotItem Header="Question 5">
+                <Grid>
+                    <TextBlock HorizontalAlignment="Left" Margin="10,51,0,0" FontSize="30" TextWrapping="Wrap" Text="{Binding ListQuestions[4].QuestionContent}" TextAlignment="Center" VerticalAlignment="Top" Height="117" Width="436"/>
+                    <RadioButton Content="{Binding ListQuestions[4].Answer1.Content}" HorizontalAlignment="Left" Margin="10,209,0,0" VerticalAlignment="Top" Width="436"/>
+                    <RadioButton Content="{Binding ListQuestions[4].Answer2.Content}" HorizontalAlignment="Left" Margin="10,281,0,0" VerticalAlignment="Top" Width="436"/>
+                    <RadioButton Content="{Binding ListQuestions[4].Answer3.Content}" HorizontalAlignment="Left" Margin="10,353,0,0" VerticalAlignment="Top" Width="436"/>
+                    <RadioButton Content="{Binding ListQuestions[4].Answer4.Content}" HorizontalAlignment="Left" Margin="10,430,0,0" VerticalAlignment="Top" Width="436"/>
+                    <TextBlock Margin="363,575,0,0" FontSize="25" TextWrapping="Wrap" Text="5 / 10" VerticalAlignment="Top" Height="59" HorizontalAlignment="Left" Width="93"/>
+                </Grid>
+            </phone:PivotItem>
+            <phone:PivotItem Header="Question 6">
+                <Grid>
+                    <TextBlock HorizontalAlignment="Left" Margin="10,51,0,0" FontSize="30" TextWrapping="Wrap" Text="{Binding ListQuestions[5].QuestionContent}" TextAlignment="Center" VerticalAlignment="Top" Height="117" Width="436"/>
+                    <RadioButton Content="{Binding ListQuestions[5].Answer1.Content}" HorizontalAlignment="Left" Margin="10,209,0,0" VerticalAlignment="Top" Width="436"/>
+                    <RadioButton Content="{Binding ListQuestions[5].Answer2.Content}" HorizontalAlignment="Left" Margin="10,281,0,0" VerticalAlignment="Top" Width="436"/>
+                    <RadioButton Content="{Binding ListQuestions[5].Answer3.Content}" HorizontalAlignment="Left" Margin="10,353,0,0" VerticalAlignment="Top" Width="436"/>
+                    <RadioButton Content="{Binding ListQuestions[5].Answer4.Content}" HorizontalAlignment="Left" Margin="10,430,0,0" VerticalAlignment="Top" Width="436"/>
+                    <TextBlock Margin="363,575,0,0" FontSize="25" TextWrapping="Wrap" Text="6 / 10" VerticalAlignment="Top" Height="59" HorizontalAlignment="Left" Width="93"/>
+                </Grid>
+            </phone:PivotItem>
+            <phone:PivotItem Header="Question 7">
+                <Grid>
+                    <TextBlock HorizontalAlignment="Left" Margin="10,51,0,0" FontSize="30" TextWrapping="Wrap" Text="{Binding ListQuestions[6].QuestionContent}" TextAlignment="Center" VerticalAlignment="Top" Height="117" Width="436"/>
+                    <RadioButton Content="{Binding ListQuestions[6].Answer1.Content}" HorizontalAlignment="Left" Margin="10,209,0,0" VerticalAlignment="Top" Width="436"/>
+                    <RadioButton Content="{Binding ListQuestions[6].Answer2.Content}" HorizontalAlignment="Left" Margin="10,281,0,0" VerticalAlignment="Top" Width="436"/>
+                    <RadioButton Content="{Binding ListQuestions[6].Answer3.Content}" HorizontalAlignment="Left" Margin="10,353,0,0" VerticalAlignment="Top" Width="436"/>
+                    <RadioButton Content="{Binding ListQuestions[6].Answer4.Content}" HorizontalAlignment="Left" Margin="10,430,0,0" VerticalAlignment="Top" Width="436"/>
+                    <TextBlock Margin="363,575,0,0" FontSize="25" TextWrapping="Wrap" Text="7 / 10" VerticalAlignment="Top" Height="59" HorizontalAlignment="Left" Width="93"/>
+                </Grid>
+            </phone:PivotItem>
+            <phone:PivotItem Header="Question 8">
+                <Grid>
+                    <TextBlock HorizontalAlignment="Left" Margin="10,51,0,0" FontSize="30" TextWrapping="Wrap" Text="{Binding ListQuestions[7].QuestionContent}" TextAlignment="Center" VerticalAlignment="Top" Height="117" Width="436"/>
+                    <RadioButton Content="{Binding ListQuestions[7].Answer1.Content}" HorizontalAlignment="Left" Margin="10,209,0,0" VerticalAlignment="Top" Width="436"/>
+                    <RadioButton Content="{Binding ListQuestions[7].Answer2.Content}" HorizontalAlignment="Left" Margin="10,281,0,0" VerticalAlignment="Top" Width="436"/>
+                    <RadioButton Content="{Binding ListQuestions[7].Answer3.Content}" HorizontalAlignment="Left" Margin="10,353,0,0" VerticalAlignment="Top" Width="436"/>
+                    <RadioButton Content="{Binding ListQuestions[7].Answer4.Content}" HorizontalAlignment="Left" Margin="10,430,0,0" VerticalAlignment="Top" Width="436"/>
+                    <TextBlock Margin="363,575,0,0" FontSize="25" TextWrapping="Wrap" Text="8 / 10" VerticalAlignment="Top" Height="59" HorizontalAlignment="Left" Width="93"/>
+                </Grid>
+            </phone:PivotItem>
+            <phone:PivotItem Header="Question 9">
+                <Grid>
+                    <TextBlock HorizontalAlignment="Left" Margin="10,51,0,0" FontSize="30" TextWrapping="Wrap" Text="{Binding ListQuestions[8].QuestionContent}" TextAlignment="Center" VerticalAlignment="Top" Height="117" Width="436"/>
+                    <RadioButton Content="{Binding ListQuestions[8].Answer1.Content}" HorizontalAlignment="Left" Margin="10,209,0,0" VerticalAlignment="Top" Width="436"/>
+                    <RadioButton Content="{Binding ListQuestions[8].Answer2.Content}" HorizontalAlignment="Left" Margin="10,281,0,0" VerticalAlignment="Top" Width="436"/>
+                    <RadioButton Content="{Binding ListQuestions[8].Answer3.Content}" HorizontalAlignment="Left" Margin="10,353,0,0" VerticalAlignment="Top" Width="436"/>
+                    <RadioButton Content="{Binding ListQuestions[8].Answer4.Content}" HorizontalAlignment="Left" Margin="10,430,0,0" VerticalAlignment="Top" Width="436"/>
+                    <TextBlock Margin="363,575,0,0" FontSize="25" TextWrapping="Wrap" Text="9 / 10" VerticalAlignment="Top" Height="59" HorizontalAlignment="Left" Width="93"/>
+                </Grid>
+            </phone:PivotItem>
+            <phone:PivotItem Header="Question 10">
+                <Grid>
+                    <TextBlock HorizontalAlignment="Left" Margin="10,51,0,0" FontSize="30" TextWrapping="Wrap" Text="{Binding ListQuestions[9].QuestionContent}" TextAlignment="Center" VerticalAlignment="Top" Height="117" Width="436"/>
+                    <RadioButton Content="{Binding ListQuestions[9].Answer1.Content}" HorizontalAlignment="Left" Margin="10,209,0,0" VerticalAlignment="Top" Width="436"/>
+                    <RadioButton Content="{Binding ListQuestions[9].Answer2.Content}" HorizontalAlignment="Left" Margin="10,281,0,0" VerticalAlignment="Top" Width="436"/>
+                    <RadioButton Content="{Binding ListQuestions[9].Answer3.Content}" HorizontalAlignment="Left" Margin="10,353,0,0" VerticalAlignment="Top" Width="436"/>
+                    <RadioButton Content="{Binding ListQuestions[9].Answer4.Content}" HorizontalAlignment="Left" Margin="10,430,0,0" VerticalAlignment="Top" Width="436"/>
+                    <TextBlock Margin="363,575,0,0" FontSize="25" TextWrapping="Wrap" Text="10 / 10" VerticalAlignment="Top" Height="59" HorizontalAlignment="Left" Width="93"/>
+                </Grid>
+            </phone:PivotItem>
+            <phone:PivotItem Header="Submit">
+                <Grid/>
+            </phone:PivotItem>
+        </phone:Pivot>
+    </Grid>
+
+</phone:PhoneApplicationPage>
