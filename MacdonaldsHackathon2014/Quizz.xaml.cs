@@ -46,20 +46,20 @@ namespace MacdonaldsHackathon2014
                         new Answer("Saint Paul's Cathedral", false),
                         new Answer("Westminster Abbey", true),
                         new Answer("Parliament Abbey", false),
-                        "The current abbey was built between 1245 and 1272, under the direction of King Henry III Which is the Biggest City in Europe?;London;Paris;Berlin;Madrid; London is the biggest city in Britain and in Europe."));
+                        "The current abbey was built between 1245 and 1272, under the direction of King Henry III."));
 
             this.ListQuestions.Add(new Question("Who Lives in Buckingham palace?",
                         new Answer("Prime Minister Of UK", false),
-                        new Answer("Judge Of the Court", false),
                         new Answer("Queen", true),
+                        new Answer("Judge Of the Court", false),
                         new Answer("Royal Guard", false),
                         "Buckingham Palace is the home of the Queen and Prince Philip."));
 
             this.ListQuestions.Add(new Question("In times of peace, whose priority was it to rebuild Westminster ?",
                         new Answer("Mark the Builder", false),
                         new Answer("Bob the builder", false),
-                        new Answer("Henry the Builder", true),
                         new Answer("Steve the Builder", false),
+                        new Answer("Henry the Builder", true),
                         "In Henry's reign there were no major wars, so he could spend his time on building projects, and his first priority was the rebuilding of Westminster Abbey."));
 
             this.ListQuestions.Add(new Question("Which of these statues can be found it Leicester Square?",
@@ -111,6 +111,90 @@ namespace MacdonaldsHackathon2014
                         new Answer("Central Park", false),
                         "Designed by John Nash in the early 1800s, Regents Park was originally meant to be the grounds for a country villa for the prince regent. "));
 
+        }
+
+        private void RadioButton_Click(object sender, RoutedEventArgs e)
+        {
+            a1.Text = "Oops. " + this.ListQuestions[0].Tips;
+            a1.Visibility = Visibility.Visible;
+            r1.Visibility = Visibility.Visible;
+        }
+
+        private void RadioButton_Click_1(object sender, RoutedEventArgs e)
+        {
+            a1.Text = "Oops. " + this.ListQuestions[0].Tips;
+            a1.Visibility = Visibility.Visible;
+            r1.Visibility = Visibility.Visible;
+        }
+
+        private void RadioButton_Click_2(object sender, RoutedEventArgs e)
+        {
+            a1.Text = "Right. " + this.ListQuestions[0].Tips;
+            a1.Visibility = Visibility.Visible;
+            r1.Visibility = Visibility.Visible;
+        }
+
+        private void RadioButton_Click_3(object sender, RoutedEventArgs e)
+        {
+            a1.Text = "Oops. " + this.ListQuestions[0].Tips;
+            a1.Visibility = Visibility.Visible;
+            r1.Visibility = Visibility.Visible;
+        }
+
+        private void RadioButton_Click_4(object sender, RoutedEventArgs e)
+        {
+            a2.Text = "Oops. " + this.ListQuestions[1].Tips;
+            a2.Visibility = Visibility.Visible;
+            r2.Visibility = Visibility.Visible;
+        }
+
+        private void RadioButton_Click_5(object sender, RoutedEventArgs e)
+        {
+            a2.Text = "Right. " + this.ListQuestions[1].Tips;
+            a2.Visibility = Visibility.Visible;
+            r2.Visibility = Visibility.Visible;
+        }
+
+        private void RadioButton_Click_6(object sender, RoutedEventArgs e)
+        {
+            a2.Text = "Oops. " + this.ListQuestions[1].Tips;
+            a2.Visibility = Visibility.Visible;
+            r2.Visibility = Visibility.Visible;
+        }
+
+        private void RadioButton_Click_7(object sender, RoutedEventArgs e)
+        {
+            a2.Text = "Oops. " + this.ListQuestions[1].Tips;
+            a2.Visibility = Visibility.Visible;
+            r2.Visibility = Visibility.Visible;
+        }
+
+        private void RadioButton_Click_8(object sender, RoutedEventArgs e)
+        {
+            a3.Text = "Oops. " + this.ListQuestions[2].Tips;
+            a3.Visibility = Visibility.Visible;
+            r3.Visibility = Visibility.Visible;
+        }
+
+        private void RadioButton_Click_9(object sender, RoutedEventArgs e)
+        {
+            a3.Text = "Oops. " + this.ListQuestions[2].Tips;
+            a3.Visibility = Visibility.Visible;
+            r3.Visibility = Visibility.Visible;
+        }
+
+        private void RadioButton_Click_10(object sender, RoutedEventArgs e)
+        {
+            a3.Text = "Oops. " + this.ListQuestions[2].Tips;
+            a3.Visibility = Visibility.Visible;
+            r3.Visibility = Visibility.Visible;
+        }
+
+        private void RadioButton_Click_11(object sender, RoutedEventArgs e)
+        {
+            a3.Text = "Right. " + this.ListQuestions[2].Tips;
+            a3.Visibility = Visibility.Visible;
+            r3.Visibility = Visibility.Visible;
         }
     }
 }
