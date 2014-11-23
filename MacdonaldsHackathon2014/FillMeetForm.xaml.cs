@@ -66,68 +66,67 @@ namespace MacdonaldsHackathon2014
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            CurrentUser = (User)PhoneApplicationService.Current.State["current"];
+        //    CurrentUser = (User)PhoneApplicationService.Current.State["current"];
 
-            try
-            {
-                if (male.IsChecked == true)
-                    CurrentUser.Gender = "Male";
-                else if (female.IsChecked == true)
-                    CurrentUser.Gender = "Female";
-                else
-                    throw new Exception("Please select your gender");
+        //    try
+        //    {
+        //        if (male.IsChecked == true)
+        //            CurrentUser.Gender = "Male";
+        //        else if (female.IsChecked == true)
+        //            CurrentUser.Gender = "Female";
+        //        else
+        //            throw new Exception("Please select your gender");
 
-                if (age.SelectedItem == null)
-                    throw new Exception("Please select your age");
-                else
-                    CurrentUser.Age = (int)age.SelectedItem;
+        //        if (age.SelectedItem == null)
+        //            throw new Exception("Please select your age");
+        //        else
+        //            CurrentUser.Age = (int)age.SelectedItem;
 
-                //if (pictureChoose.Source != null)
-                //    CurrentUser.Picture = pictureChoose;
-                //else
-                //    throw new Exception("Please select a profile picture");
+        //        if (pictureChoose.Source != null)
+        //            CurrentUser.Picture = pictureChoose;
+        //        else
+        //            throw new Exception("Please select a profile picture");
 
-                if (bike.IsChecked == true)
-                    CurrentUser.AddActivity(bike.ToString());
-                if (museum.IsChecked == true)
-                    CurrentUser.AddActivity(museum.ToString());
-                if (computer.IsChecked == true)
-                    CurrentUser.AddActivity(computer.ToString());
-                if (eat.IsChecked == true)
-                    CurrentUser.AddActivity(eat.ToString());
-                if (nightclub.IsChecked == true)
-                    CurrentUser.AddActivity(nightclub.ToString());
-                if (eat.IsChecked == true)
-                    CurrentUser.AddActivity(eat.ToString());
-                if (meet.IsChecked == true)
-                    CurrentUser.AddActivity(meet.ToString());
+        //        if (bike.IsChecked == true)
+        //            CurrentUser.AddActivity(bike.ToString());
+        //        if (museum.IsChecked == true)
+        //            CurrentUser.AddActivity(museum.ToString());
+        //        if (computer.IsChecked == true)
+        //            CurrentUser.AddActivity(computer.ToString());
+        //        if (eat.IsChecked == true)
+        //            CurrentUser.AddActivity(eat.ToString());
+        //        if (nightclub.IsChecked == true)
+        //            CurrentUser.AddActivity(nightclub.ToString());
+        //        if (eat.IsChecked == true)
+        //            CurrentUser.AddActivity(eat.ToString());
+        //        if (meet.IsChecked == true)
+        //            CurrentUser.AddActivity(meet.ToString());
 
-                if (CurrentUser.Activities.Count == 0)
-                    throw new Exception("Please select at least one activity");
+        //        if (CurrentUser.Activities.Count == 0)
+        //            throw new Exception("Please select at least one activity");
 
-                if (fr.IsChecked == true)
-                    CurrentUser.AddLanguage(fr.ToString());
-                if (sp.IsChecked == true)
-                    CurrentUser.AddLanguage(sp.ToString());
-                if (en.IsChecked == true)
-                    CurrentUser.AddLanguage(en.ToString());
-                if (ch.IsChecked == true)
-                    CurrentUser.AddLanguage(ch.ToString());
-                if (it.IsChecked == true)
-                    CurrentUser.AddLanguage(it.ToString());
-                if (se.IsChecked == true)
-                    CurrentUser.AddLanguage(se.ToString());
+        //        if (fr.IsChecked == true)
+        //            CurrentUser.AddLanguage(fr.ToString());
+        //        if (sp.IsChecked == true)
+        //            CurrentUser.AddLanguage(sp.ToString());
+        //        if (en.IsChecked == true)
+        //            CurrentUser.AddLanguage(en.ToString());
+        //        if (ch.IsChecked == true)
+        //            CurrentUser.AddLanguage(ch.ToString());
+        //        if (it.IsChecked == true)
+        //            CurrentUser.AddLanguage(it.ToString());
+        //        if (se.IsChecked == true)
+        //            CurrentUser.AddLanguage(se.ToString());
 
-                if (CurrentUser.Languages.Count == 0)
-                    throw new Exception("Please select at least one language");
+        //        if (CurrentUser.Languages.Count == 0)
+        //            throw new Exception("Please select at least one language");
 
-                PhoneApplicationService.Current.State["current"] = CurrentUser;
-                NavigationService.Navigate(new Uri("/MeetHome.xaml", UriKind.Relative));
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+        //        PhoneApplicationService.Current.State["current"] = CurrentUser;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message);
+        //    }
         }
     }
 }

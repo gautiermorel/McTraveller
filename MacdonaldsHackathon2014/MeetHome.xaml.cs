@@ -69,48 +69,8 @@ namespace MacdonaldsHackathon2014
             tmp2.AddLanguage("Spanish");
             ListPhonesConnected.Add(tmp1);
             ListPhonesConnected.Add(tmp2);
-            User tmp3 = new User("Elisabeth", "toto123", "daphné123@toto.net");
-            tmp3.Age = 21;
-            tmp3.Gender = "Female";
-            tmp3.AddActivity("NightClub");
-            tmp3.AddActivity("Biking");
-            tmp3.AddLanguage("French");
-            User tmp4 = new User("Paul", "toto123", "PierreDeFeu@titi.net");
-            tmp4.Age = 35;
-            tmp4.Gender = "Male";
-            tmp4.AddActivity("Music");
-            tmp4.AddLanguage("French");
-            tmp4.AddLanguage("Spanish");
-            ListPhonesConnected.Add(tmp3);
-            ListPhonesConnected.Add(tmp4);
-            User tmp5 = new User("Laura", "toto123", "daphné123@toto.net");
-            tmp5.Age = 21;
-            tmp5.Gender = "Female";
-            tmp5.AddActivity("NightClub");
-            tmp5.AddActivity("Biking");
-            tmp5.AddLanguage("French");
-            User tmp6 = new User("José", "toto123", "PierreDeFeu@titi.net");
-            tmp6.Age = 35;
-            tmp6.Gender = "Male";
-            tmp6.AddActivity("Music");
-            tmp6.AddLanguage("French");
-            tmp6.AddLanguage("Spanish");
-            ListPhonesConnected.Add(tmp5);
-            ListPhonesConnected.Add(tmp6);
-            User tmp7 = new User("Bernadette", "toto123", "daphné123@toto.net");
-            tmp7.Age = 21;
-            tmp7.Gender = "Female";
-            tmp7.AddActivity("NightClub");
-            tmp7.AddActivity("Biking");
-            tmp7.AddLanguage("French");
-            User tmp8 = new User("Walter", "toto123", "PierreDeFeu@titi.net");
-            tmp8.Age = 35;
-            tmp8.Gender = "Male";
-            tmp8.AddActivity("Music");
-            tmp8.AddLanguage("French");
-            tmp8.AddLanguage("Spanish");
-            ListPhonesConnected.Add(tmp7);
-            ListPhonesConnected.Add(tmp8);
+
+
 
             this.ListConnections = new List<Connection>();
             this.ListConnections.Add(new Connection() { ConnectedFrom = CurrentUser.Username, ConnectedTo = "Daphné" });
@@ -149,9 +109,6 @@ namespace MacdonaldsHackathon2014
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            if (PhoneApplicationService.Current.State.Keys.Contains("current"))
-                CurrentUser = (User)PhoneApplicationService.Current.State["current"];
-
             //if (CurrentUser.Age == -1)
             //    NavigationService.Navigate(new Uri("/FillMeetForm.xaml", UriKind.Relative));
 
