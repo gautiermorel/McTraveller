@@ -45,9 +45,6 @@ namespace MacdonaldsHackathon2014
             NavigationService.Navigate(new Uri("/MeetHome.xaml", UriKind.Relative));
         }
 
-        
-
-
         public Quizz()
         {
             InitializeComponent();
@@ -211,12 +208,32 @@ namespace MacdonaldsHackathon2014
             r3.Visibility = Visibility.Visible;
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        private void RadioButton_Click_12(object sender, RoutedEventArgs e)
         {
+            a4.Text = "Oops. " + this.ListQuestions[9].Tips;
+            a4.Visibility = Visibility.Visible;
+            r4.Visibility = Visibility.Visible;
+        }
 
-            NavigationService.Navigate(new Uri("/HomeScreen.xaml", UriKind.Relative));
+        private void RadioButton_Click_13(object sender, RoutedEventArgs e)
+        {
+            a4.Text = "Oops. " + this.ListQuestions[9].Tips;
+            a4.Visibility = Visibility.Visible;
+            r4.Visibility = Visibility.Visible;
+        }
 
+        private void RadioButton_Click_14(object sender, RoutedEventArgs e)
+        {
+            a4.Text = "Right. " + this.ListQuestions[9].Tips;
+            a4.Visibility = Visibility.Visible;
+            r4.Visibility = Visibility.Visible;
+        }
 
+        private void RadioButton_Click_15(object sender, RoutedEventArgs e)
+        {
+            a4.Text = "Oops. " + this.ListQuestions[9].Tips;
+            a4.Visibility = Visibility.Visible;
+            r4.Visibility = Visibility.Visible;
         }
     }
 }
