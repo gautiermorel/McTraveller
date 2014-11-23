@@ -235,5 +235,10 @@ namespace MacdonaldsHackathon2014
             a4.Visibility = Visibility.Visible;
             r4.Visibility = Visibility.Visible;
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/HomeScreen.xaml", UriKind.Relative));
+        }
     }
 }
