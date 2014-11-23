@@ -207,5 +207,33 @@ namespace MacdonaldsHackathon2014
             a3.Visibility = Visibility.Visible;
             r3.Visibility = Visibility.Visible;
         }
+
+        private void RadioButton_Click_12(object sender, RoutedEventArgs e)
+        {
+            a4.Text = "Oops. " + this.ListQuestions[9].Tips;
+            a4.Visibility = Visibility.Visible;
+            r4.Visibility = Visibility.Visible;
+        }
+
+        private void RadioButton_Click_13(object sender, RoutedEventArgs e)
+        {
+            a4.Text = "Oops. " + this.ListQuestions[9].Tips;
+            a4.Visibility = Visibility.Visible;
+            r4.Visibility = Visibility.Visible;
+        }
+
+        private void RadioButton_Click_14(object sender, RoutedEventArgs e)
+        {
+            a4.Text = "Right. " + this.ListQuestions[9].Tips;
+            a4.Visibility = Visibility.Visible;
+            r4.Visibility = Visibility.Visible;
+        }
+
+        private void RadioButton_Click_15(object sender, RoutedEventArgs e)
+        {
+            a4.Text = "Oops. " + this.ListQuestions[9].Tips;
+            a4.Visibility = Visibility.Visible;
+            r4.Visibility = Visibility.Visible;
+        }
     }
 }
