@@ -15,7 +15,7 @@ namespace MacdonaldsHackathon2014
 
         public int Age { get; set; }
         public string Gender { get; set; }
-        public string Picture { get; set; }
+        public Image Picture { get; set; }
 
         public List<string> Languages { get; set; }
         public List<string> Activities { get; set; }
