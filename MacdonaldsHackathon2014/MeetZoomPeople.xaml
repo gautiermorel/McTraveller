@@ -33,7 +33,7 @@
             McDonald's COUNTY HALL
             </TextBlock>
 
-            <Image Source="/img/1.png" HorizontalAlignment="Left" Height="176" Width="145" Margin="157,161,0,0" VerticalAlignment="Top"/>
+            <Image Source="{Binding UserSelected.Picture.Source}" HorizontalAlignment="Left" Height="176" Width="145" Margin="157,161,0,0" VerticalAlignment="Top"/>
             <TextBlock Foreground="White" FontSize="50" HorizontalAlignment="Center" Margin="157,342,98,0" Text="{Binding UserSelected.Username}" VerticalAlignment="Top" Height="75" Width="201"/>
             <TextBlock FontSize="40" HorizontalAlignment="Left" Margin="132,422,0,0" TextWrapping="Wrap" Text="{Binding UserSelected.Age}" VerticalAlignment="Top" Height="60" Width="83"/>
             <phone:LongListSelector FontSize="40" ItemsSource="{Binding UserSelected.Languages}" HorizontalAlignment="Left" Height="166" Margin="10,508,0,0" VerticalAlignment="Top" Width="205"/>

@@ -15,25 +15,24 @@
 
     <phone:PhoneApplicationPage.Resources>
         <DataTemplate x:Key="PhonesConnectedTemplate">
-            <StackPanel Height="120" Margin="0,0,0,20">
-                <Border Padding="5" Background="White" CornerRadius="5" Height="180" BorderBrush="#FDC82F" BorderThickness="2" >
-                    <Grid Height="150">
+            <StackPanel Height="200" Margin="0,0,0,20">
+                <Border Padding="5" Background="White" CornerRadius="5" Height="200" BorderBrush="#FDC82F" BorderThickness="2" >
+                    <Grid Height="200">
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="*" />
-                            <RowDefinition Height="*" />
-                            <RowDefinition Height="*" />
-                            <RowDefinition Height="*" />
+                            <RowDefinition Height="80" />
+                            <RowDefinition Height="40" />
+                            <RowDefinition Height="40" />
+                            <RowDefinition Height="40" />
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="5*" />
-                            <ColumnDefinition Width="10*" />
+                            <ColumnDefinition Width="120" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
                         
-                        <Image Source="{Binding Picture}" Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Width="70" Height="150"/>
-                        <TextBlock Text="{Binding Username}" Grid.Row="0" Grid.Column="1" Foreground="#FDC82F" FontSize="35" Width="220" Height="50"></TextBlock>
-                        <TextBlock Text="{Binding LanguagesToShow}" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Foreground="#000" FontSize="25" Width="220"></TextBlock>
-                        <TextBlock Text="{Binding ActivitiesToShow}" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Foreground="#000" FontSize="25" Width="220"></TextBlock>
+                        <Image Source="{Binding Picture.Source}" Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Width="100" Height="180"/>
+                        <TextBlock Text="{Binding Username}" Grid.Row="0" Grid.Column="1" Foreground="#FDC82F" FontSize="35" Height="50"></TextBlock>
+                        <TextBlock Text="{Binding LanguagesToShow}" Grid.Row="1" Grid.Column="1" Foreground="#000" FontSize="25" Width="220"></TextBlock>
+                        <TextBlock Text="{Binding ActivitiesToShow}" Grid.Row="2" Grid.RowSpan="2" Grid.Column="1" Foreground="#000" FontSize="25" Width="220"></TextBlock>
                     </Grid>
                     
                 </Border>
