@@ -37,21 +37,17 @@
             <Image Source="/img/res.png" Width="50" Height="50" Margin="30,49,400,469"/>
             <TextBlock Foreground="#D52B1E" FontSize="35" Margin="104,36,62,419">Well, You are a total <LineBreak/> tourist</TextBlock>
             
-            <TextBlock Foreground="#D52B1E" Margin="53,238,31,295">you can find a consumer to discover london</TextBlock>
+            <TextBlock Foreground="#D52B1E" Margin="53,238,31,295">Discover London with others</TextBlock>
 
-            <Button Click="Meetup_Click" BorderBrush="#D52B1E" VerticalAlignment="Top" HorizontalAlignment="Left" Background="Transparent" Width="440" Margin="30,278,0,0">
+            <Button Click="Meetup_Click" BorderBrush="#D52B1E" VerticalAlignment="Top" HorizontalAlignment="Left" Background="Transparent" Width="440" Margin="30,278,0,0" Height="170">
                 <StackPanel Orientation="Horizontal" Width="400">
-                    <Image Source="/img/meet3.png" Width="150" Height="150" Margin="0,0,10,0"/>
+                    <Image Source="/img/meet3.png" Width="150" Height="132" Margin="0,0,10,0"/>
                     <StackPanel Orientation="Vertical">
-                        <TextBlock Foreground="#D52B1E" FontSize="32" Width="240">
-                        	<Run Text="Let's me"/>
-                        	<Run Text="e"/>
-                        	<Run Text="t them"/>
-                        </TextBlock>
-                        <TextBlock Foreground="#000" FontSize="23" Width="240" Height="76" >
-                        	<Run Text="What is around "/>
+                        <TextBlock Height="18" />
+                        <TextBlock Foreground="#D52B1E" FontSize="32" Width="240" Height="131">
+                        	<Run Text="Meet other" />
                         	<LineBreak/>
-                        	<Run Text="this McDonald's ?"/>
+                        	<Run Text="McTravellers" />
                         </TextBlock>
                     </StackPanel>
                 </StackPanel>
