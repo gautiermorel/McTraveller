@@ -39,11 +39,21 @@
     </phone:PhoneApplicationPage.Resources>
 
     <!--LayoutRoot est la grille racine où tout le contenu de la page est placé-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot">
 
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.504,1.5" StartPoint="0.504,0.03">
+                <GradientStop Color="#600301" Offset="0"/>
+                <GradientStop Color="#CF0F00" Offset="0.567"/>
+            </LinearGradientBrush>
+        </Grid.Background>
         <!--ContentPanel - placez tout contenu supplémentaire ici-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <phone:LongListSelector BorderBrush="White" BorderThickness="2" HorizontalAlignment="Left" Height="649" Margin="10,82,0,0" VerticalAlignment="Top" Width="436" ItemsSource="{Binding MatchedUsers}" ItemTemplate="{StaticResource PhonesConnectedTemplate}" />
+            <Image HorizontalAlignment="Center" Width="200" Height="200" Source="img/logo.png" Margin="132,-44,124,540"></Image>
+            <TextBlock Width="250" Margin="114,166,92,576">
+            McDonald's COUNTY HALL
+            </TextBlock>
+            <phone:LongListSelector BorderBrush="White" BorderThickness="2" HorizontalAlignment="Left" Height="482" Margin="10,216,0,0" VerticalAlignment="Top" Width="436" ItemsSource="{Binding MatchedUsers}" ItemTemplate="{StaticResource PhonesConnectedTemplate}" />
 
         </Grid>
     </Grid>

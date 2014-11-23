@@ -28,13 +28,18 @@
         </Grid.RowDefinitions>
         <!--ContentPanel - placez tout contenu supplémentaire ici-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <Image HorizontalAlignment="Left" Height="300" Width="200" Margin="10,10,0,0" VerticalAlignment="Top"/>
-            <TextBlock Foreground="White" FontSize="30" HorizontalAlignment="Left" Margin="215,10,0,0" TextWrapping="Wrap" Text="{Binding UserSelected.Username}" VerticalAlignment="Top" Height="71" Width="231"/>
-            <TextBlock HorizontalAlignment="Left" Margin="236,134,0,0" TextWrapping="Wrap" Text="{Binding UserSelected.Age}" VerticalAlignment="Top" Height="50" Width="210"/>
-            <phone:LongListSelector ItemsSource="{Binding UserSelected.Languages}" HorizontalAlignment="Left" Height="48" Margin="88,340,0,0" VerticalAlignment="Top" Width="291"/>
-            <phone:LongListSelector ItemsSource="{Binding UserSelected.Activities}" HorizontalAlignment="Left" Height="185" Margin="10,420,0,0" VerticalAlignment="Top" Width="436"/>
-            <CheckBox CommandParameter="{Binding UserSelected.Username}" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked" IsChecked="{Binding UserSelected.ImConnectedToThisUser, Mode=TwoWay}" Content="Connect this people" HorizontalAlignment="Left" Margin="10,610,0,0" VerticalAlignment="Top"/>
-            <TextBlock HorizontalAlignment="Left" Margin="301,184,0,0" TextWrapping="Wrap" Text="{Binding UserSelected.Gender}" VerticalAlignment="Top" Height="43" Width="145"/>
+            <Image HorizontalAlignment="Center" Width="200" Height="200" Source="img/logo.png" Margin="132,-44,124,540"></Image>
+            <TextBlock Width="250" Margin="114,127,92,540">
+            McDonald's COUNTY HALL
+            </TextBlock>
+
+            <Image Source="/img/1.png" HorizontalAlignment="Left" Height="176" Width="145" Margin="157,161,0,0" VerticalAlignment="Top"/>
+            <TextBlock Foreground="White" FontSize="50" HorizontalAlignment="Center" Margin="157,342,98,0" Text="{Binding UserSelected.Username}" VerticalAlignment="Top" Height="75" Width="201"/>
+            <TextBlock FontSize="40" HorizontalAlignment="Left" Margin="132,422,0,0" TextWrapping="Wrap" Text="{Binding UserSelected.Age}" VerticalAlignment="Top" Height="60" Width="83"/>
+            <phone:LongListSelector FontSize="40" ItemsSource="{Binding UserSelected.Languages}" HorizontalAlignment="Left" Height="166" Margin="10,508,0,0" VerticalAlignment="Top" Width="205"/>
+            <phone:LongListSelector FontSize="40" ItemsSource="{Binding UserSelected.Activities}" HorizontalAlignment="Left" Height="168" Margin="220,508,0,0" VerticalAlignment="Top" Width="236"/>
+            <CheckBox CommandParameter="{Binding UserSelected.Username}" Checked="CheckBox_Checked" Unchecked="CheckBox_Checked" IsChecked="{Binding UserSelected.ImConnectedToThisUser, Mode=TwoWay}" Content="Connect this people" HorizontalAlignment="Left" Margin="95,676,0,-52" VerticalAlignment="Top"/>
+            <TextBlock FontSize="40" HorizontalAlignment="Left" Margin="220,422,0,0" TextWrapping="Wrap" Text="{Binding UserSelected.Gender}" VerticalAlignment="Top" Height="50" Width="226"/>
         </Grid>
     </Grid>
 
