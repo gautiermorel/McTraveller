@@ -70,12 +70,11 @@ namespace MacdonaldsHackathon2014
             ListPhonesConnected.Add(tmp1);
             ListPhonesConnected.Add(tmp2);
 
+
+
             this.ListConnections = new List<Connection>();
             this.ListConnections.Add(new Connection() { ConnectedFrom = CurrentUser.Username, ConnectedTo = "Daphné" });
             this.ListConnections.Add(new Connection() { ConnectedFrom = "Pierre", ConnectedTo = CurrentUser.Username });
-
-            //if (CurrentUser.Age == -1)
-            //    NavigationService.Navigate(new Uri("/FillMeetForm.xaml", UriKind.Relative));
 
             foreach (Connection connection in ListConnections)
             {
@@ -110,6 +109,9 @@ namespace MacdonaldsHackathon2014
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            if (CurrentUser.Age == -1)
+                NavigationService.Navigate(new Uri("/FillMeetForm.xaml", UriKind.Relative));
+
             User userSelected = null;
             if (PhoneApplicationService.Current.State.Keys.Contains("param"))
                 userSelected = (User)PhoneApplicationService.Current.State["param"];
