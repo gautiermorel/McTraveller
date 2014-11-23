@@ -48,7 +48,7 @@
         <Grid x:Name="ContentPanel" Background="Purple" Grid.Row="1" Margin="12,0,12,0">
             
             <phone:LongListSelector BorderBrush="#D52B1E" BorderThickness="5" HorizontalAlignment="Left" Height="649" Margin="10,82,0,0" VerticalAlignment="Top" Width="436" ItemsSource="{Binding ListPhonesConnected}" ItemTemplate="{StaticResource PhonesConnectedTemplate}" SelectionChanged="LongListSelector_SelectionChanged" />
-            <Button Foreground="#FDC82F" BorderBrush="#D52B1E" Content="Mutual connections" HorizontalAlignment="Left" Margin="202,0,0,0" VerticalAlignment="Top" Width="254" Click="Button_Click"/>
+            <Button Foreground="#FDC82F" BorderBrush="#D52B1E" Content="Sexy git !" HorizontalAlignment="Left" Margin="202,0,0,0" VerticalAlignment="Top" Width="254" Click="Button_Click"/>
             
         </Grid>
     </Grid>
