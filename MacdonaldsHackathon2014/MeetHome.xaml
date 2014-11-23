@@ -30,7 +30,7 @@
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
                         
-                        <Image Source="{Binding Picture}" Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Width="70" Height="150"/>
+                        <Image Source="{Binding Picture.Source}" Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Width="70" Height="150"/>
                         <TextBlock Text="{Binding Username}" Grid.Row="0" Grid.Column="1" Foreground="#FDC82F" FontSize="35" Width="220" Height="50"></TextBlock>
                         <TextBlock Text="{Binding LanguagesToShow}" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Foreground="#000" FontSize="25" Width="220"></TextBlock>
                         <TextBlock Text="{Binding ActivitiesToShow}" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Foreground="#000" FontSize="25" Width="220"></TextBlock>

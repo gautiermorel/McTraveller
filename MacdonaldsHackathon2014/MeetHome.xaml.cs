@@ -68,15 +68,29 @@ namespace MacdonaldsHackathon2014
             tmp2.AddActivity("Music");
             tmp2.AddLanguage("French");
             tmp2.AddLanguage("Spanish");
+            User tmp3 = new User("Deborah", "toto123", "daphné123@toto.net");
+            tmp3.Age = 21;
+            tmp3.Gender = "Female";
+            tmp3.AddActivity("NightClub");
+            tmp3.AddActivity("Biking");
+            tmp3.AddLanguage("French");
+            User tmp4 = new User("Walt", "toto123", "PierreDeFeu@titi.net");
+            tmp4.Age = 35;
+            tmp4.Gender = "Male";
+            tmp4.AddActivity("Music");
+            tmp4.AddLanguage("French");
+            tmp4.AddLanguage("Spanish");
+
             ListPhonesConnected.Add(tmp1);
             ListPhonesConnected.Add(tmp2);
+            ListPhonesConnected.Add(tmp3);
+            ListPhonesConnected.Add(tmp4);
 
+            CurrentUser.Picture = new Image();
+            CurrentUser.Picture.Source = new BitmapImage(new Uri("/img/2.jpg", UriKind.Relative));
             ListPhonesConnected.Add(CurrentUser);
             
-            ListPhonesConnected.Move(2, 0);
-
-            ListPhonesConnected[0].Picture = new Image();
-            ListPhonesConnected[0].Picture.Source = new BitmapImage(new Uri("/img/2.jpg", UriKind.Relative));
+            ListPhonesConnected.Move(4, 0);
 
             this.ListConnections = new List<Connection>();
             this.ListConnections.Add(new Connection() { ConnectedFrom = CurrentUser.Username, ConnectedTo = "Daphné" });
