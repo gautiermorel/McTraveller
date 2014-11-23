@@ -20,12 +20,17 @@
             <!--Élément un de tableau croisé dynamique-->
             <phone:PivotItem Header="Let's begin!">
                 <Grid>
+                    
                     <TextBlock Foreground="#FDC82F" HorizontalAlignment="Left" Margin="10,51,0,0" FontSize="30" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Top" Height="239" Width="436">
                         We want you to know as much as possible about the local area around McDonald's. <LineBreak/> Use this to help plan your next trip!
                         
                         
                     </TextBlock>
-                        
+
+                    <Button Height="100" Width="100" Background="White" Click="Button_Click_2" Margin="184,357,172,177">
+                        <Image Source="/img/home.png"></Image>
+                    </Button>
+                    
                 </Grid>
             </phone:PivotItem>
             <phone:PivotItem Header="Question 1">

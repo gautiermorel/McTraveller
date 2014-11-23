@@ -45,6 +45,9 @@ namespace MacdonaldsHackathon2014
             NavigationService.Navigate(new Uri("/MeetHome.xaml", UriKind.Relative));
         }
 
+        
+
+
         public Quizz()
         {
             InitializeComponent();
@@ -206,6 +209,14 @@ namespace MacdonaldsHackathon2014
             a3.Text = "Right. " + this.ListQuestions[2].Tips;
             a3.Visibility = Visibility.Visible;
             r3.Visibility = Visibility.Visible;
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+
+            NavigationService.Navigate(new Uri("/HomeScreen.xaml", UriKind.Relative));
+
+
         }
     }
 }

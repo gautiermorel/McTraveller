@@ -213,6 +213,7 @@
     <Content Include="img\b.png" />
     <Content Include="img\d.png" />
     <Content Include="img\c.png" />
+    <Content Include="img\home.png" />
     <Content Include="img\logo.png" />
     <Content Include="img\meet3.png" />
     <Content Include="img\play3.png" />

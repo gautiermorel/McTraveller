@@ -43,6 +43,13 @@ namespace MacdonaldsHackathon2014
             img.Source = toto;
         }
 
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/HomeScreen.xaml", UriKind.Relative));
+        }
+        
+        
+        
         void photoChooserTask_Completed(object sender, PhotoResult e)
         {
             if (e.TaskResult == TaskResult.OK)
